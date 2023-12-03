@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class EventController extends Controller
 {
     public function showHome(){
-        $events = Event::all();
+        $events = Event::latest()->get()->take(5);
         return view('guest.home',[
             'title' => 'Home',
             'events' => $events

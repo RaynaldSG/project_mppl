@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('purchase_logs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('ticket_id')->nullable();
-            $table->foreignId('user_id');
+            $table->foreignId('ticket_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
             $table->string('title');
             $table->integer('amount');
             $table->bigInteger('price');

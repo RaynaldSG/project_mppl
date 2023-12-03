@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('event_id');
+            $table->foreignId('event_id')->constrained()->restrictOnDelete();
             $table->integer('slot');
             $table->integer('purchased');
             $table->bigInteger('price');
