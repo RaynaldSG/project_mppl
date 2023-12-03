@@ -32,7 +32,8 @@ class TicketController extends Controller
         PurchaseLog::create($validatedData);
 
         $ticket->update([
-            'slot' => $ticket->slot - $validatedData['amount']
+            'slot' => $ticket->slot - $validatedData['amount'],
+            'purchased' => $ticket->purchased + $validatedData['amount'],
         ]);
 
         return back()->with('success', "Purchase Success");

@@ -102,7 +102,7 @@
                         </div>
                     @enderror
                     <img class="img-preview img-fluid mb-3">
-                    <input class="form-control" name="image" type="file" id="image" accept=".png"
+                    <input class="form-control" name="image" type="file" id="image" accept=".png, .jpg, .jpeg"
                         onchange="previewImage()">
                 </div>
                 <div class="form-check">

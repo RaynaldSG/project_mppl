@@ -23,7 +23,7 @@ class EventController extends Controller
                 'event' => $event
             ]);
         }
-        $events = Event::all();
+        $events = Event::latest()->get();
         return view('EventArticle.eventIndex',[
             'title' => 'Event',
             'events' => $events

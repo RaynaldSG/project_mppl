@@ -5,7 +5,7 @@
         @if (auth()->user()->country == 'indonesia')
         <h1>SELAMAT DATANG</h1>
         @else
-        <h1>WELOCME</h1>
+        <h1>WELCOME</h1>
         @endif
     </div>
 @endsection
