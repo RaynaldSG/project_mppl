@@ -27,6 +27,6 @@ class ProfileController extends Controller
         User::where('id', $request->user()->id)->update($validatedData);
 
 
-        return redirect('/dashboard/profile/' . $request->user()->id)->with('success', 'Profile Edit Success');
+        return redirect('/dashboard/profile')->with('success', 'Profile Edit Success');
     }
 }

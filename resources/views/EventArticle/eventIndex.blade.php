@@ -16,13 +16,19 @@
                     {{-- <a class="text-decoration-none" href='/article?author=' style="color: rgb(147, 148, 150)">
                     <h4>Penyelenggara :
                 </a> --}}
-                <h4 style="color: rgb(147, 148, 150">Lokasi : {{ $event->location }} </h4>
-                <h4 style="color: rgb(147, 148, 150">Tanggal : {{ $Carbon::parse($event->start)->format('l, j F Y') }} </h4>
-                <h4 style="color: rgb(147, 148, 150">Penyelenggara : {{ $event->organizer }}</h4>
+                <h4 style="color: rgb(147, 148, 150">Location : {{ $event->location }} </h4>
+                <h4 style="color: rgb(147, 148, 150">Date : {{ $Carbon::parse($event->start)->format('l, j F Y') }} </h4>
+                <h4 style="color: rgb(147, 148, 150">Organizer : {{ $event->organizer }}</h4>
                 </p>
+                @if (isset(auth()->user()->country) && auth()->user()->country == 'indonesia')
+                <small>
+                    <p class="card-text text-black">{{ Str::limit($event->desc_ID, 50, '...') }}</p>
+                </small>
+                @else
                 <small>
                     <p class="card-text text-black">{{ Str::limit($event->desc_EN, 50, '...') }}</p>
                 </small>
+                @endif
                 <a class="text-decoration-none btn btn-secondary my-3" href="/event?detail={{ $event->id }}">Read More</a>
                 <small>
                     <p class="card-text text-black-50"><small>uploaded at: {{ $event->created_at->diffForHumans() }}</small></p>

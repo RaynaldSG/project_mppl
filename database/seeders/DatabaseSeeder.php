@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
 
         Event::create([
             'title' => "Sendratari Ramayana",
-            'organizer' => "Oragnisasi Penari Ramayana",
+            'organizer' => "Organisasi Penari Ramayana",
             'desc_EN' => "This is a description in english",
             'desc_ID' => "Ini Deskripsi Indo",
             'location' => "Prambanan, Sleman, Yogyakarta",

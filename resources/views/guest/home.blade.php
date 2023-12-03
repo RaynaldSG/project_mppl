@@ -3,7 +3,11 @@
 
 @section('main-content')
     <center>
-        <h1 class="mt-3 mb-5">Selamat Datang / Welcome</h1>
+        @if (isset(auth()->user()->country) && auth()->user()->country == 'indonesia')
+        <h1 class="my-4">SELAMAT DATANG</h1>
+        @else
+        <h1 class="my-4">WELCOME</h1>
+        @endif
         <div class="container text-light row align-items-center border" style="height: 100%;">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <a href="event?detail={{ $events[0]->id }}">
