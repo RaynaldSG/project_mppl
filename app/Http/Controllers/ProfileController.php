@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-    public function profileIndex(User $user)
+    public function profileIndex()
     {
+        $user = User::where('id', auth()->user()->id)->get()->first();
         return view('dashboard.profile.editProfile', [
             'title' => 'Profile',
             'user' => $user,

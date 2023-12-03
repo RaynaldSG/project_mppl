@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Ticket extends Model
+class PurchaseLog extends Model
 {
     use HasFactory;
 
@@ -13,11 +13,11 @@ class Ticket extends Model
         'id'
     ];
 
-    public function event(){
-        return $this->belongsTo(Event::class);
+    public function user(){
+        return $this->belongsTo(User::class);
     }
 
-    public function purchasedLog(){
-        return $this->hasMany(PurchaseLog::class);
+    public function ticket(){
+        return $this->belongsTo(Ticket::class);
     }
 }

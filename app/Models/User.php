@@ -38,4 +38,8 @@ class User extends Authenticatable
     protected $casts = [
         'password' => 'hashed',
     ];
+
+    public function purchasedLog(){
+        return $this->hasMany(PurchaseLog::class);
+    }
 }

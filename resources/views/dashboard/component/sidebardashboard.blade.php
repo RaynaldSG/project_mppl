@@ -13,18 +13,28 @@
         </div>
         <div class="container mb-2">
             <a class="text-decoration-none text-light icon-link icon-link-hover"
-                style="font-size: 20px; --bs-icon-link-transform: translate3d(0, -0.25rem, 0);" href="/dashboard/profile/{{ auth()->user()->id }}"><i
-                    class="bi bi-file-person-fill me-2"></i>Profile</a>
+                style="font-size: 20px; --bs-icon-link-transform: translate3d(0, -0.25rem, 0);"
+                href="/dashboard/profile"><i class="bi bi-file-person-fill me-2"></i>Profile</a>
+        </div>
+        <div class="container mb-2">
+            <a class="text-decoration-none text-light icon-link icon-link-hover"
+                style="font-size: 20px; --bs-icon-link-transform: translate3d(0, -0.25rem, 0);" href="/dashboard/log"><i
+                    class="bi bi-card-checklist me-2"></i>Purchase Log</a>
         </div>
         <hr>
         @can('admin')
-        <h5 class="offcanvas-title mb-4" id="offcanvasExampleLabel">Administrator</h5>
-        <div class="container mb-2">
-            <a class="text-decoration-none text-light icon-link icon-link-hover"
-                style="font-size: 20px; --bs-icon-link-transform: translate3d(0, -0.25rem, 0);"
-                href="/dashboard/event"><i class="bi bi-file-earmark-fill me-2"></i>Event</a>
-        </div>
-        <hr>
+            <h5 class="offcanvas-title mb-4" id="offcanvasExampleLabel">Administrator</h5>
+            <div class="container mb-2">
+                <a class="text-decoration-none text-light icon-link icon-link-hover"
+                    style="font-size: 20px; --bs-icon-link-transform: translate3d(0, -0.25rem, 0);"
+                    href="/dashboard/event"><i class="bi bi-file-earmark-fill me-2"></i>Event</a>
+            </div>
+            <div class="container mb-2">
+                <a class="text-decoration-none text-light icon-link icon-link-hover"
+                    style="font-size: 20px; --bs-icon-link-transform: translate3d(0, -0.25rem, 0);" href="/dashboard/logAdmin"><i
+                        class="bi bi-card-checklist me-2"></i>Admin Purchase Log</a>
+            </div>
+            <hr>
         @endcan
         <div class="container mb-2">
             <a class="text-decoration-none text-light icon-link icon-link-hover"
