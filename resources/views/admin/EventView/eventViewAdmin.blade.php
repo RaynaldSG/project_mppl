@@ -1,7 +1,7 @@
 @extends('dashboard.layout.dashboardLayout')
 
 @section('content')
-    <h1 class="h2 text-center mt-4 mb-4">Event</h1>
+    <h1 class="text-center mt-4 mb-4">Event</h1>
 
 
     <div class="container col-lg-7">

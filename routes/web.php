@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminEventController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TicketController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,6 +38,10 @@ Route::get('/dashboard', function(){
         'title' => 'Dashboard',
     ]);
 })->middleware('auth');
+
+//profile
+Route::get('/dashboard/profile/{user}', [ProfileController::class, 'profileIndex']);
+Route::post('/dashboard/profile', [ProfileController::class, 'profileEdit']);
 
 //Admin Event
 Route::resource('/dashboard/event', AdminEventController::class)->middleware('admin');

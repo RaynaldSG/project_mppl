@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
             'username' => 'raynald',
             'password' => 123210092,
             'email' => 'ray@gmail.com',
-            'country' => 'Indonesia',
+            'country' => 'indonesia',
             'is_admin' => true
         ]);
 

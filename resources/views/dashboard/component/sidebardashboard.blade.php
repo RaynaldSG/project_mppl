@@ -13,7 +13,7 @@
         </div>
         <div class="container mb-2">
             <a class="text-decoration-none text-light icon-link icon-link-hover"
-                style="font-size: 20px; --bs-icon-link-transform: translate3d(0, -0.25rem, 0);" href="/profile"><i
+                style="font-size: 20px; --bs-icon-link-transform: translate3d(0, -0.25rem, 0);" href="/dashboard/profile/{{ auth()->user()->id }}"><i
                     class="bi bi-file-person-fill me-2"></i>Profile</a>
         </div>
         <hr>
