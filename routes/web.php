@@ -39,17 +39,18 @@ Route::get('/dashboard', function(){
 })->middleware('auth');
 
 //profile
-Route::get('/dashboard/profile', [ProfileController::class, 'profileIndex']);
-Route::post('/dashboard/profile', [ProfileController::class, 'profileEdit']);
+Route::get('/dashboard/profile', [ProfileController::class, 'profileIndex'])->middleware('auth');
+Route::post('/dashboard/profile', [ProfileController::class, 'profileEdit'])->middleware('auth');
 
 //Ticket
-Route::get('/ticket', [TicketController::class, 'ticketIndex']);
-Route::post('/ticket', [TicketController::class, 'ticketBuy']);
+Route::get('/ticket', [TicketController::class, 'ticketIndex'])->middleware('auth');
+Route::post('/ticket', [TicketController::class, 'ticketBuy'])->middleware('auth');
 
 //Purchase Log User
-Route::get('/dashboard/log', [PurchaseLogController::class, 'logIndexUser']);
-Route::get('/dashboard/logAdmin', [PurchaseLogController::class, 'logIndexAdmin']);
-Route::get('/dashboard/logAdmin/edit', [PurchaseLogController::class, 'logUpdate']);
+Route::get('/dashboard/log', [PurchaseLogController::class, 'logIndexUser'])->middleware('auth');
+//Purchae Log Admin
+Route::get('/dashboard/logAdmin', [PurchaseLogController::class, 'logIndexAdmin'])->middleware('admin');
+Route::get('/dashboard/logAdmin/edit', [PurchaseLogController::class, 'logUpdate'])->middleware('admin');
 
 //Admin Event
 Route::resource('/dashboard/event', AdminEventController::class)->middleware('admin');

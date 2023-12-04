@@ -9,6 +9,11 @@
                     {{ session('success') }}
                 </p>
             @endif
+            @if (session()->has('fail'))
+                <p class="card text-center mx-5 mt-3 mb-1" style="font-weight: 700; background-color:rgb(249, 0, 0)6)">
+                    {{ session('fail') }}
+                </p>
+            @endif
             <h5>Title: {{ $ticket->event->title }}</h5>
             <h5>Slot: {{ $ticket->slot }}</h5>
             <h5 id="price">Price: {{ $ticket->price }}</h5>
