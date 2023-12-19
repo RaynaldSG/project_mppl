@@ -13,7 +13,7 @@
     <p>Hi, your payment for event "{{ $data['event'] }}", on behalf of {{ $data['name'] }}</p>
     <p>Purchase ID: {{ $data['id'] }}</p>
     <br>
-    <p class="text-bold">HAS BEEN CONFIRMED</p>
+    <p style="font-weight: 700">HAS BEEN CONFIRMED</p>
     <p>Show this email to receptionist when event start</p>
     <br>
     <p>Thank You</p>
