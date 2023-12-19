@@ -11,6 +11,7 @@
 <body>
     <h1>Payment Notification</h1>
     <p>Hi, you have successfully buy ticket of event "{{ $data['event'] }}", on behalf of {{ $data['name'] }}</p>
+    <p>Purchase ID: {{ $data['id'] }}</p>
     <p>Price: {{ $data['price'] }}</p>
     <p>Amount: {{ $data['amount'] }}</p>
     <p>Total: {{ $data['total'] }}</p>

@@ -16,6 +16,7 @@ class MailCOntroller extends Controller
         $data['price'] = $log->price;
         $data['amount'] = $log->amount;
         $data['total'] = $log->total;
+        $data['image'] = $log->ticket->event->image;
 
         $email = new MailPayment($data);
         Mail::to($log->user->email)->send($email);
